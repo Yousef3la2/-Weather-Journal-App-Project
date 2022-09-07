@@ -23,9 +23,7 @@ const generateData = () => {
         feelings,
       };
 
-      PostData(server + "/add", info);
-
-      DisplayData();
+      PostData(server + "/add", info).then(function(){DisplayData();})
     }
   });
 };
